@@ -1,0 +1,185 @@
+/* Wrapper */
+.admin-login-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  flex-direction: row;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Left background image with zoom animation */
+.admin-login-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  animation: bgZoom 15s ease-in-out infinite alternate;
+}
+
+.admin-login-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Right form container */
+.admin-login-form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Glassmorphic form box */
+.admin-login-form-box {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  animation: slideFadeIn 1s ease forwards;
+}
+
+/* Logo */
+.admin-login-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+}
+
+/* Title and subtitle */
+.login-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #364a72;
+  margin-bottom: 24px;
+}
+
+/* Error message */
+.admin-login-error {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Form fields */
+.admin-login-field {
+  margin-bottom: 16px;
+}
+
+.admin-login-field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #f0f2f5;
+}
+
+.admin-login-field input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #111827;
+}
+
+.admin-login-field input::placeholder {
+  color: #d1d5db;
+}
+
+.admin-login-field input:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* Password toggle */
+.admin-password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Login button */
+.admin-login-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(37, 99, 235, 0.8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background: rgba(37, 99, 235, 1);
+}
+
+/* Forgot password */
+.forgot-password {
+  text-align: center;
+  color: #007bff;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .admin-login-wrapper {
+    flex-direction: row; /* keep side-by-side */
+  }
+
+  .admin-login-image {
+    flex: 0.5;
+  }
+
+  .admin-login-form-container {
+    flex: 1;
+    padding: 20px;
+  }
+}

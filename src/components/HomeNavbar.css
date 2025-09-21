@@ -1,0 +1,220 @@
+/* NAVBAR BASE STYLES */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar-logo img {
+  height: 50px;
+  
+}
+
+/* NAVIGATION MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  display: block;
+  margin: 5px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  color: #007BFF;
+}
+
+.ecosystem-dropdown {
+  display: flex;
+  gap: 40px;
+  min-width: 400px;
+}
+
+.dropdown-column h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* DESKTOP BUTTONS */
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: rgb(115, 92, 221);
+  border: 1px solid #007BFF;
+}
+
+.get-started-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.get-started-btn:hover {
+  background-color: #0056b3;
+}
+
+/* HAMBURGER MENU (Mobile Toggle) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    background: #f9f9f9;
+  }
+
+  .ecosystem-dropdown {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dropdown-column {
+    margin-bottom: 10px;
+  }
+
+  .navbar-buttons {
+    display: flex !important; /* Hide desktop buttons */
+  }
+
+  .mobile-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .mobile-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Default: hide mobile buttons on large screen */
+.mobile-buttons {
+  display: none;
+}

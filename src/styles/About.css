@@ -1,0 +1,119 @@
+.about-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/team-bg2.png') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-section.alt-bg {
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.about-icon {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.about-list li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 15px;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-list li {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+  .about-list li {
+    font-size: 0.95rem;
+  }
+}
